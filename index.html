@@ -4,179 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hyeonseung Kim</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Georgia', serif;
-      font-size: 16px;
-      color: #222;
-      background: #fff;
-      line-height: 1.7;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: #fff;
-      border-bottom: 1px solid #e0e0e0;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 0.75rem 1rem;
-      z-index: 100;
-      font-family: sans-serif;
-      font-size: 0.9rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #555;
-      transition: color 0.2s;
-    }
-    nav a:hover, nav a.active { color: #000d9b; font-weight: bold; }
-
-    /* ── LAYOUT ── */
-    main {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 5rem 1.5rem 4rem;
-    }
-
-    /* ── HEADER ── */
-    .profile {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    .profile img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #e0e0e0;
-    }
-    .profile-placeholder {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background: #e8e8e8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #aaa;
-      font-size: 0.8rem;
-      font-family: sans-serif;
-      flex-shrink: 0;
-    }
-    .profile-info h1 {
-      font-size: 1.9rem;
-      font-weight: normal;
-      margin-bottom: 0.2rem;
-    }
-    .profile-info .subtitle {
-      color: #555;
-      font-size: 0.95rem;
-      margin-bottom: 0.6rem;
-    }
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-    }
-    .links a {
-      display: inline-block;
-      padding: 3px 12px;
-      background: #000d9b;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      font-family: sans-serif;
-      font-size: 0.82rem;
-      font-weight: 100;
-    }
-    .links a:hover { background: #0010c9; }
-
-    /* ── SECTIONS ── */
-    section {
-      margin-top: 3rem;
-      scroll-margin-top: 4.5rem;
-    }
-    section h2 {
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1.2rem;
-      letter-spacing: 0.02em;
-    }
-
-    /* ── NEWS ── */
-    .news-item {
-      display: flex;
-      gap: 1.2rem;
-      margin-bottom: 0.6rem;
-      font-size: 0.93rem;
-    }
-    .news-item .date {
-      color: #888;
-      white-space: nowrap;
-      font-family: sans-serif;
-      min-width: 80px;
-    }
-
-    /* ── EDUCATION / EXPERIENCE ── */
-    .entry {
-      margin-bottom: 1.2rem;
-    }
-    .entry .meta {
-      font-family: sans-serif;
-      font-size: 0.85rem;
-      color: #888;
-    }
-    .entry strong { font-size: 1rem; }
-
-    /* ── PROJECTS ── */
-    .project {
-      margin-bottom: 1.4rem;
-    }
-    .project .title {
-      font-weight: bold;
-    }
-    .project .desc {
-      font-size: 0.93rem;
-      color: #444;
-    }
-    .project .tag {
-      display: inline-block;
-      font-family: sans-serif;
-      font-size: 0.78rem;
-      background: #f0f0f0;
-      border-radius: 3px;
-      padding: 1px 7px;
-      margin-right: 4px;
-      color: #555;
-    }
-    .project a {
-      font-family: sans-serif;
-      font-size: 0.82rem;
-      color: #000d9b;
-      text-decoration: none;
-      margin-right: 8px;
-    }
-    .project a:hover { text-decoration: underline; }
-
-    footer {
-      margin-top: 4rem;
-      text-align: center;
-      font-family: sans-serif;
-      font-size: 0.8rem;
-      color: #aaa;
-      padding-bottom: 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -192,7 +20,7 @@
 
   <!-- HEADER -->
   <div class="profile">
-    <div class="profile-placeholder">Photo</div>
+    <img src="images/profile.jpg" alt="Hyeonseung Kim" />
     <div class="profile-info">
       <h1>Hyeonseung Kim</h1>
       <p class="subtitle">
@@ -212,12 +40,12 @@
   <section id="about">
     <h2>About</h2>
     <p>
-      I am an M.S. student at <a href="https://sociology.kaist.ac.kr/" target="_blank" style="color:#000d9b; text-decoration:none;">Social Computing Lab</a>, Korea Advanced Institute of Science and Technology (KAIST), advised by sociologist Wonjae Lee. My vision is a future where humans and AI coexist in harmony, and where AI is used to ease social conflict rather than intensify it. My research focuses on trustworthy and transparent AI and on understanding online information ecosystems, with the goal of fostering healthier public discourse and a less divided society.
+      I am an M.S. student at <a href="https://sociology.kaist.ac.kr/" target="_blank" class="inline-link">Social Computing Lab</a>, Korea Advanced Institute of Science and Technology (KAIST), advised by sociologist Wonjae Lee. My vision is a future where humans and AI coexist in harmony, and where AI is used to ease social conflict rather than intensify it. My research focuses on trustworthy and transparent AI and on understanding online information ecosystems, with the goal of fostering healthier public discourse and a less divided society.
     </p>
     <br>
     <p><strong>Research Interests</strong></p>
-    <ul style="margin-top:0.5rem; padding-left:1.4rem; font-size:0.95rem;">
-      <li style="margin-bottom:0.5rem;"><strong>Explainability</strong>: I develop interpretable and human-centered AI methods that make complex machine learning systems more transparent, reliable, and accountable. My research focuses on understanding how AI models represent and reason about social and linguistic signals, enabling the detection and explanation of phenomena such as coordinated behavior, moral and emotional expression, and information dynamics in online environments.</li>
+    <ul class="interest-list">
+      <li><strong>Explainability</strong>: I develop interpretable and human-centered AI methods that make complex machine learning systems more transparent, reliable, and accountable. My research focuses on understanding how AI models represent and reason about social and linguistic signals, enabling the detection and explanation of phenomena such as coordinated behavior, moral and emotional expression, and information dynamics in online environments.</li>
       <li><strong>Social Impact</strong>: I study how online information environments shape human behavior and society. By combining computational social science, natural language processing, and large-scale behavioral analysis, I investigate how online discourse, moral emotions, and information operations influence public opinion, political participation, user engagement, collective behavior, and polarization.</li>
     </ul>
   </section>
@@ -225,17 +53,27 @@
   <!-- NEWS -->
   <section id="news">
     <h2>News</h2>
-    <div class="news-item">
-      <span class="date">2026.06</span>
-      <span>Paper accepted at <em>USENIX Security Symposium 2026</em>.</span>
-    </div>
-    <div class="news-item">
-      <span class="date">2026.04</span>
-      <span>Paper accepted at <em>Frontiers in Oncology</em>.</span>
-    </div>
-    <div class="news-item">
-      <span class="date">2026.01</span>
-      <span>Paper accepted at <em>The Web Conference (WWW '26)</em>.</span>
+    <div class="news-list">
+      <div class="news-item">
+        <span class="date">2026.08</span>
+        <span>Paper accepted at <em>The 2026 Symposium on Electronic Crime Research (eCrime 2026)</em>.</span>
+      </div>
+      <div class="news-item">
+        <span class="date">2026.08</span>
+        <span>Presented a poster at <em>USENIX Security Symposium (USENIX Security '26)</em> in Baltimore, MD.</span>
+      </div>
+      <div class="news-item">
+        <span class="date">2026.06</span>
+        <span>Paper accepted at <em>USENIX Security Symposium 2026</em>.</span>
+      </div>
+      <div class="news-item">
+        <span class="date">2026.04</span>
+        <span>Paper accepted at <em>Frontiers in Oncology</em>.</span>
+      </div>
+      <div class="news-item">
+        <span class="date">2026.01</span>
+        <span>Paper accepted at <em>The Web Conference (WWW '26)</em>.</span>
+      </div>
     </div>
   </section>
 
@@ -246,13 +84,13 @@
     <div class="entry">
       <strong>Korea Advanced Institute of Science and Technology (KAIST)</strong>
       <div class="meta">M.S., Graduate School of Metaverse · Sep 2025 – Present</div>
-      <div style="font-size:0.9rem; color:#555;">Social Computing Lab, advised by Wonjae Lee</div>
+      <div class="sub">Social Computing Lab, advised by Wonjae Lee</div>
     </div>
 
     <div class="entry">
       <strong>Handong Global University</strong>
       <div class="meta">B.S., AI Convergence &amp; Business Administration (Dual Major) · Feb 2016 – Feb 2022</div>
-      <div style="font-size:0.9rem; color:#555;">Data Analysis Lab</div>
+      <div class="sub">Data Analysis Lab</div>
     </div>
   </section>
 
@@ -263,7 +101,7 @@
     <div class="entry">
       <strong>SKIA</strong>
       <div class="meta">XR Specialist · Mar 2024 – Jul 2025</div>
-      <ul style="margin-top:0.4rem; padding-left:1.4rem; font-size:0.9rem; color:#444;">
+      <ul class="bullets">
         <li>Developed medical augmented reality applications for surgical planning and visualization</li>
         <li>Built deep learning segmentation models for pelvic and hepatic vasculature detection from CT/MRI scans</li>
         <li>Worked across Computer Vision, iOS (Swift), and Unity development pipelines</li>
@@ -273,7 +111,7 @@
     <div class="entry">
       <strong>Codestates</strong>
       <div class="meta">AI Bootcamp Instructor — Machine Learning Section · Sep 2022 – Aug 2023</div>
-      <ul style="margin-top:0.4rem; padding-left:1.4rem; font-size:0.9rem; color:#444;">
+      <ul class="bullets">
         <li>Designed and delivered curriculum covering AI and machine learning fundamentals</li>
       </ul>
     </div>
@@ -285,9 +123,13 @@
     <h2>Publications</h2>
 
     <div class="project">
-      <div class="desc">Jaehong Kim<sup>*</sup>, <strong>Hyeonseung Kim</strong><sup>*</sup>, Jiseon Kim, Alice Oh, Thorsten Holz, Wonjae Lee, Meeyoung Cha. "Cross-National Information Attacks: A Two-Decade Analysis of Troll Behavior in Korea." <em>USENIX Security Symposium (USENIX Security '26)</em>, 2026. <span style="font-family:sans-serif; font-size:0.78rem; background:#f0f0f0; border-radius:3px; padding:1px 7px; margin-left:2px; color:#555;">To appear</span></div>
+      <div class="desc"><strong>Hyeonseung Kim</strong>, Jaehong Kim, Meeyoung Cha, Wonjae Lee. "Suspected Foreign Influence Activity in Korean News Discussions on YouTube." <em>Symposium on Electronic Crime Research (eCrime 2026)</em>, 2026. <span class="tag tag-inline">To appear</span></div>
     </div>
-    <div style="font-family:sans-serif; font-size:0.82rem; color:#888; margin-top:-0.5rem; margin-bottom:0.8rem;"><sup>*</sup> Equal contribution</div>
+
+    <div class="project">
+      <div class="desc">Jaehong Kim<sup>*</sup>, <strong>Hyeonseung Kim</strong><sup>*</sup>, Jiseon Kim, Alice Oh, Thorsten Holz, Wonjae Lee, Meeyoung Cha. "Cross-National Information Attacks: A Two-Decade Analysis of Troll Behavior in Korea." <em>USENIX Security Symposium (USENIX Security '26)</em>, 2026. <span class="tag tag-inline">To appear</span></div>
+    </div>
+    <div class="footnote"><sup>*</sup> Equal contribution</div>
 
     <div class="project">
       <div class="desc"><strong>Hyeonseung Kim</strong>, Min Jin Jeong, Kyo Yeong Koo, Youn Jin Choi, Eun Seo Heo, Woohyun Nam, Sangyun Kang, U-Young Lee, Yi-Suk Kim, Keun Ho Lee, Chan-Ung Park. "Deep Learning Accurately and Reliably Segments Pelvic Vascular Structure in CT Scans of Gynecologic Cancer Patients." <em>Frontiers in Oncology</em>, 2026. <a href="https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2026.1687859" target="_blank">https://doi.org/10.3389/fonc.2026.1687859</a></div>
@@ -304,20 +146,7 @@
   &copy; 2026 Hyeonseung Kim
 </footer>
 
-<script>
-  // 스크롤 시 nav active 표시
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('nav a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.id;
-    });
-    navLinks.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  });
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,5 @@
+# Claude Code 로컬 설정 (프리뷰 서버 등) — 저장소에 올릴 필요 없음
+.claude/
+
+# macOS
+.DS_Store

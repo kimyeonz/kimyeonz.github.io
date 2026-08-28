@@ -1,0 +1,210 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  color: #222;
+  background: #fff;
+  line-height: 1.7;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.75rem 1rem;
+  z-index: 100;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+nav a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.2s;
+}
+nav a:hover, nav a.active { color: #000d9b; font-weight: bold; }
+
+/* ── LAYOUT ── */
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 4rem;
+}
+
+/* ── HEADER ── */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.profile img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 2px solid #e0e0e0;
+  flex-shrink: 0;
+}
+.profile-info h1 {
+  font-size: 1.9rem;
+  font-weight: normal;
+  margin-bottom: 0.2rem;
+}
+.profile-info .subtitle {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.links a {
+  display: inline-block;
+  padding: 3px 12px;
+  background: #000d9b;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 0.82rem;
+  font-weight: 100;
+}
+.links a:hover { background: #0010c9; }
+
+/* ── SECTIONS ── */
+section {
+  margin-top: 3rem;
+  scroll-margin-top: 4.5rem;
+}
+section h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── ABOUT ── */
+.inline-link {
+  color: #000d9b;
+  text-decoration: none;
+}
+.interest-list {
+  margin-top: 0.5rem;
+  padding-left: 1.4rem;
+  font-size: 0.95rem;
+}
+.interest-list li:not(:last-child) { margin-bottom: 0.5rem; }
+
+/* ── NEWS ── */
+.news-list {
+  max-height: 9.5rem;         /* JS 미동작 시 폴백 — 평소엔 main.js가 실측해서 덮어씀 */
+  overflow-y: auto;
+  padding-right: 0.6rem;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #d8d8d8 transparent;
+}
+.news-list::-webkit-scrollbar { width: 6px; }
+.news-list::-webkit-scrollbar-track { background: transparent; }
+.news-list::-webkit-scrollbar-thumb {
+  background: #d8d8d8;
+  border-radius: 3px;
+}
+.news-list::-webkit-scrollbar-thumb:hover { background: #bbb; }
+
+.news-item {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.93rem;
+}
+.news-item .date {
+  color: #888;
+  white-space: nowrap;
+  font-family: sans-serif;
+  min-width: 80px;
+}
+
+/* ── EDUCATION / EXPERIENCE ── */
+.entry {
+  margin-bottom: 1.2rem;
+}
+.entry .meta {
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  color: #888;
+}
+.entry strong { font-size: 1rem; }
+.entry .sub {
+  font-size: 0.9rem;
+  color: #555;
+}
+.entry .bullets {
+  margin-top: 0.4rem;
+  padding-left: 1.4rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* ── PROJECTS / PUBLICATIONS ── */
+.project {
+  margin-bottom: 1.4rem;
+}
+.project .title {
+  font-weight: bold;
+}
+.project .desc {
+  font-size: 0.93rem;
+  color: #444;
+}
+.project .tag {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.78rem;
+  background: #f0f0f0;
+  border-radius: 3px;
+  padding: 1px 7px;
+  margin-right: 4px;
+  color: #555;
+}
+.project .tag-inline {
+  margin-right: 0;
+  margin-left: 2px;
+}
+.project a {
+  font-family: sans-serif;
+  font-size: 0.82rem;
+  color: #000d9b;
+  text-decoration: none;
+  margin-right: 8px;
+}
+.project a:hover { text-decoration: underline; }
+
+.footnote {
+  font-family: sans-serif;
+  font-size: 0.82rem;
+  color: #888;
+  margin-top: -0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: #aaa;
+  padding-bottom: 2rem;
+}
