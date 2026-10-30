@@ -245,9 +245,11 @@ footer {
     color: #000d9b;
     padding: 0;
     font-weight: normal;
-    font-size: 0;                     /* 버튼 글자(GitHub 등)를 감춘다 */
   }
-  .links a::after {
+  /* data-print 가 있을 때만 버튼 글자를 감추고 그 값을 대신 찍는다.
+     속성이 없는 링크는 원래 글자가 그대로 인쇄된다 (사라지지 않도록). */
+  .links a[data-print] { font-size: 0; }
+  .links a[data-print]::after {
     content: attr(data-print);
     font-size: 0.85rem;
   }
